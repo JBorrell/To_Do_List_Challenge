@@ -1,0 +1,14 @@
+.title {
+  height: auto;
+  width: 500px;
+  background: whitesmoke;
+  border-width: thin;
+  border-color: black;
+  border-style: solid;
+  padding: 25px;
+  margin: auto;
+}
+
+body {
+  text-align: center;
+}
