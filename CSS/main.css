@@ -1,14 +1,78 @@
 .title {
   height: auto;
   width: 500px;
+  border-radius: 30px;
   background: whitesmoke;
   border-width: thin;
   border-color: black;
   border-style: solid;
   padding: 25px;
   margin: auto;
+  margin-top: 25px;
+  opacity: 0.7;
+}
+
+.completed-false{
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.completed-true{
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px;
+  text-decoration: line-through;
+}
+
+.tdl {
+  margin: auto;
+  margin-top: 30px;
+  width: 1000px;
+  /*border-style: solid;
+  border-color: black;*/
 }
 
 body {
   text-align: center;
+  background: url(lined-paper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tdl li {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  list-style-type: none;
+  border-style: solid;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#clear {
+  margin: 20px;
+  padding: 10px;
+}
+
+#del {
+  height:25px;
+  color: white;
+  float: right;
+  background-color: red;
+}
+
+.check {
+  float: left;
+  height: 30px;
+  width: 30px;
+}
+
+.number {
+  float: left;
+  margin-left: 25px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
 }

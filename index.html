@@ -15,8 +15,31 @@
   <body ng-controller="ToDoListController as tdlCtrl">
     <div class="title">
       <h1>What needs doing??</h1>
+      <br>
+      <h3><ng-pluralize count="tdlCtrl.taskList.length"
+                    when="{ '0': 'Nothing to do!',
+                          'one': '1 Thing to do',
+                          'other': '{} Things to do'}">
+      </ng-pluralize></h3>
     </div>
     <div class="tdl">
+      <li ng-repeat="task in tdlCtrl.taskList">
+          <input class="check" type="checkbox" ng-click="tdlCtrl.taskDone($index)">
+          <span class="number">{{$index + 1}}.</span>
+          <span class="completed-{{task.completed}}">{{task.task}}</span>
+          <button id="del" ng-click="tdlCtrl.deleteTask($index)">X</button>
+          <br>
+      </li>
+    </div>
+    <br><br>
+    <div class="newTask">
+      <form name="createTask" ng-submit="tdlCtrl.addTask(tdlCtrl.taskname)">
+        <input type="text" ng-model="tdlCtrl.taskname" required>
+        <input type="submit" value="Add Task!"/>
+      </form>
+    </div>
+    <div class="clearList">
+      <button id="clear"ng-click="tdlCtrl.clearList()">Clear List</button>
     </div>
   </body>
 </html>

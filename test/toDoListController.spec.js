@@ -31,4 +31,21 @@ describe('Completing a task', function(){
   });
 });
 
+describe('Deleting tasks', function(){
+  it('is able to remove a single task from to do list', function(){
+    ctrl.addTask("Clean Room");
+    ctrl.deleteTask(0);
+    expect(ctrl.taskList[0]).toBeUndefined();
+  });
+
+  it('is able clear all tasks from to do list', function(){
+    ctrl.addTask("Clean Room");
+    ctrl.addTask("Wash Dishes");
+    ctrl.addTask("Walk Dog");
+    ctrl.clearList();
+    expect(ctrl.taskList).toEqual([]);
+  });
+
+});
+
 });
