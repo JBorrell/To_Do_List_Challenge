@@ -1,24 +1,14 @@
-# Todo Challenge
+To Do List Single Page Application
+-----------------------------------
 
-* Deadline: submit completed pull request by 9am on Monday
-* You may use whatever level of JavaScript you feel comfortable with - pure JS, jQuery, Angular, or whatever weird and wonderful framework you want to try. Extra points for DogeScript
+I've created a single page application which represents a forum for a user
+to store tasks to be completed at a later date. Users can create tasks,
+mark them as completed and delete them as they choose. Project was designed
+upon the following user stories.
 
-Steps
--------
+User Stories
+------------
 
-1. Fill out your learning plan self review for the week: https://github.com/makersacademy/learning_plan 
-2. Fork this repo, and clone to your local machine
-3. Complete the following challenge:
-
-## Challenge
-
-![Todo mockup](https://makersacademy.mybalsamiq.com/mockups/2914603.png?key=afabb09aef2901a2732515ae4349c1ec0458294b)
-
-Build a Todo list as a mini front-end application. You don't have to use a database, the front-end is more important - you can use an appropriate data structure stored somewhere in your JavaScript (this time only!)
-
-Here are the core user stories:
-
-```
 As a forgetful person
 I want to store my tasks
 So that I don't forget them
@@ -30,14 +20,6 @@ So that I have more time to think about other things
 As a person who actually gets stuff done
 I want to mark my tasks as done
 So that I don't do them twice
-```
-
-Here are some other user stories you may choose to implement:
-
-```
-As a person with a lot of tasks
-I want to be able to filter my tasks by "All", "Active", "Complete"
-So that I only see the relevant tasks
 
 As a person who doesn't like counting by hand
 I want to see a total number of tasks
@@ -46,28 +28,47 @@ So that I don't have to count
 As someone who has done lots of stuff
 I want to be able to clear my completed tasks
 So I never see them again
-```
 
-As you may imagine, implementing a To-do list is very much a solved problem. However, we are mainly interested in seeing how you approach testing and design. We are looking for:
+As a person with a lot of tasks
+I want to be able to filter my tasks by "All", "Active", "Complete"
+So that I only see the relevant tasks
 
-* well written, well structured acceptance and unit tests
-* clear and expressive JavaScript
-* good HTML5 markup
 
-Don't worry about deployment, and make sure you read the CONTRIBUTING.md when submitting a pull request.
+Setup
+------
 
-## Extensions
+1. Clone this repo locally
+2. Open the 'index.html' file
+3. Navigate the browser according to prompts
 
-* Deploy the app
-* Create a persistance layer (e.g. MongoDB), or use LocalStorage or the filesystem through Node
-* Make it look purdy (CSS) - try a framework like Bootstrap or Foundation
+Testing
+-------
+* Make sure npm & bower are installed
 
-## CI
+Unit Tests:
+- Open Terminal or iTerm
+- Ensure you are in the correct directory
+- Run 'karma start test/karma.conf.js'
 
-Read the `.travis.yml` if any of the steps below don't make sense! 
+Feature Tests:
+- Open Terminal or iTerm
+- Ensure you are in the correct directory
+* You will need 3 different tabs
+- Open a local test server by running 'http-server'
+- Run a web testing driver by running 'webdriver-manager start'
+- Run tests using 'protractor test/e2e/conf.js'
 
-* Make sure you have set up `npm test` in your `package.json` so that it runs your Karma tests
-* Make sure you have your Protractor config file at `e2e/conf.js`
-* Make sure `npm start` spins up whatever serves up your app - `http-server`, Sinatra or Node
+* Testing will open a browser quickly to perform test for the front end
+of the application. Do not be alarmed.
 
-Good luck!
+All tests should pass with 0 failures.
+
+Further Extensions
+------------------
+
+- Adding filters to tasks
+- Sorting tasks by importance
+- Additional prompts when deleting incomplete tasks
+- Hosting task list on an external database
+ - (Adding user sign up to allow access to unique lists?)
+- Deploying application to Heroku

@@ -1,7 +1,7 @@
 toDoList.controller('ToDoListController', [function(){
     var self = this;
 
-    self.taskList = [{task: "Finish Challenge", completed: false}];
+    self.taskList = [{task: "Finish Challenge", completed: true}];
 
     self.addTask = function(taskname){
       self.taskList.push({task: taskname, completed: false})
