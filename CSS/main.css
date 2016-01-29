@@ -54,6 +54,9 @@ body {
 #clear {
   margin: 20px;
   padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 #del {
@@ -75,4 +78,22 @@ body {
   color: black;
   font-weight: bold;
   font-size: 30px;
+}
+
+.newTask {
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 20px;
+  margin: auto;
+  height: 70px;
+  width: 350px;
+  background: whitesmoke;
+  border-width: thin;
+  border-color: black;
+  border-style: solid;
+  opacity: 0.7;
+}
+
+#add {
+  margin-left: 15px;
 }

@@ -16,7 +16,7 @@
     <div class="title">
       <h1>What needs doing??</h1>
       <br>
-      <h3><ng-pluralize count="tdlCtrl.taskList.length"
+      <h3 id="count"><ng-pluralize count="tdlCtrl.taskList.length"
                     when="{ '0': 'Nothing to do!',
                           'one': '1 Thing to do',
                           'other': '{} Things to do'}">
@@ -33,9 +33,9 @@
     </div>
     <br><br>
     <div class="newTask">
-      <form name="createTask" ng-submit="tdlCtrl.addTask(tdlCtrl.taskname)">
-        <input type="text" ng-model="tdlCtrl.taskname" required>
-        <input type="submit" value="Add Task!"/>
+      <form name="createTask">
+        <input type="text" ng-model="tdlCtrl.taskname">
+        <input id="add" type="submit" value="Add Task!" ng-click="tdlCtrl.addTask(tdlCtrl.taskname); tdlCtrl.taskname= null"/>
       </form>
     </div>
     <div class="clearList">
