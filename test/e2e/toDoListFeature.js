@@ -45,12 +45,15 @@ describe('To Do List Application', function() {
       expect(taskCount.getText()).toEqual('Nothing to do!');
     });
     it('allows user to mark task as completed', function(){
+      clearListBtn.click();
+      newTaskBox.sendKeys('Walk Dog');
+      addTaskBtn.click();
       completeTaskBtn.click();
       expect(element(by.className('completed-false')).isPresent()).toBeFalsy();
-      expect(element(by.className('completed-true')).getText()).toEqual("Finish Challenge")
+      expect(element(by.className('completed-true')).getText()).toEqual("Walk Dog")
     });
   });
-  
+
   describe('Clearing all tasks', function(){
     it('Deletes all tasks upon clicking "Clear List" button', function(){
       newTaskBox.sendKeys('Walk Dog');
