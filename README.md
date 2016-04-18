@@ -38,8 +38,11 @@ Setup
 ------
 
 1. Clone this repo locally
-2. Open the 'index.html' file
-3. Navigate the browser according to prompts
+2. Change into the To Do List home directory in terminal
+3. Run 'npm install'
+4. Run 'bower install'
+5. Run 'open index.html'
+6. Navigate the browser according to prompts
 
 Testing
 -------
